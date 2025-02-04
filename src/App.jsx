@@ -19,6 +19,7 @@ function App() {
         <AuthProvider>
           <Routes>
             {/* Ruta publica */}
+            <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
 
