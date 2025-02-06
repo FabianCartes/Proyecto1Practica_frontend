@@ -4,9 +4,10 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: process.env.DATABASE_URL || 3000, // Usa el puerto definido por Railway
-    host: true, // Asegura que el servidor acepte conexiones externas
+    port: process.env.PORT || 3000, // ✅ Usa correctamente process.env.PORT
+    host: true,
   },
+  
   build: {
     outDir: 'dist', // Asegura que los archivos se generen en dist
     sourcemap: true, // Opcional: útil para depuración
